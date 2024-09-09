@@ -7,7 +7,7 @@ Este proyecto es una aplicación frontend desarrollada con Angular para gestiona
 ## Requisitos
 
 - Node.js y npm instalados
-- Angular CLI instalado
+- Angular CLI instalado `npm install -g @angular/cli`
 - json-server npm `npm install -g json-server`
 
 ## Entorno de desarrollo
