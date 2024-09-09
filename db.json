@@ -1,0 +1,151 @@
+{
+  "productos": [
+    {
+      "id": "1",
+      "idProducto": 1,
+      "nombre": "Producto A"
+    },
+    {
+      "id": "2",
+      "idProducto": 2,
+      "nombre": "Producto B"
+    },
+    {
+      "id": "3",
+      "idProducto": 3,
+      "nombre": "Producto C"
+    }
+  ],
+  "proveedores": [
+    {
+      "id": "1",
+      "idProveedor": 1,
+      "nombre": "Paresa"
+    },
+    {
+      "id": "2",
+      "idProveedor": 2,
+      "nombre": "Luminotecnia"
+    },
+    {
+      "id": "3",
+      "idProveedor": 3,
+      "nombre": "Kzero"
+    },
+    {
+      "id": "4",
+      "idProveedor": 4,
+      "nombre": "NGO"
+    }
+  ],
+  "jaulas": [
+    {
+      "id": "1",
+      "idJaula": 1,
+      "nombre": "Jaula 1",
+      "enUso": "S"
+    },
+    {
+      "id": "2",
+      "idJaula": 2,
+      "nombre": "Jaula 2",
+      "enUso": "N"
+    },
+    {
+      "id": "3",
+      "idJaula": 3,
+      "nombre": "Jaula 3",
+      "enUso": "N"
+    }
+  ],
+  "turnos": [
+    {
+      "id": "1",
+      "idTurno": 1,
+      "fecha": "2024-09-01",
+      "horaInicioAgendamiento": "08:00",
+      "horaFinAgendamiento": "08:30",
+      "idProveedor": "1",
+      "idJaula": null,
+      "horaInicioRecepcion": null,
+      "horaFinRecepcion": null
+    },
+    {
+      "id": "2",
+      "idTurno": 2,
+      "fecha": "2024-09-02",
+      "horaInicioAgendamiento": "09:00",
+      "horaFinAgendamiento": "10:00",
+      "idProveedor": "2",
+      "idJaula": "1",
+      "horaInicioRecepcion": "12:53",
+      "horaFinRecepcion": null
+    },
+    {
+      "id": "3",
+      "idTurno": 3,
+      "fecha": "2024-09-03",
+      "horaInicioAgendamiento": "09:00",
+      "horaFinAgendamiento": "09:30",
+      "idProveedor": "3",
+      "idJaula": "2",
+      "horaInicioRecepcion": "15:32",
+      "horaFinRecepcion": "17:54"
+    },
+    {
+      "id": "4",
+      "idTurno": 4,
+      "fecha": "2024-09-09",
+      "horaInicioAgendamiento": "13:00",
+      "horaFinAgendamiento": "15:00",
+      "idProveedor": "1",
+      "idJaula": null,
+      "horaInicioRecepcion": null,
+      "horaFinRecepcion": null
+    }
+  ],
+  "detalles": [
+    {
+      "id": "1",
+      "idTurno": 1,
+      "idProducto": 1,
+      "cantidad": 1
+    },
+    {
+      "id": "1",
+      "idTurno": 2,
+      "idProducto": 2,
+      "cantidad": 2
+    },
+    {
+      "id": "2",
+      "idTurno": 1,
+      "idProducto": 3,
+      "cantidad": 2
+    },
+    {
+      "id": "1",
+      "idTurno": 3,
+      "idProducto": 3,
+      "cantidad": 23
+    },
+    {
+      "id": "1",
+      "idTurno": 4,
+      "idProducto": 1,
+      "cantidad": 1
+    },
+    {
+      "id": "2",
+      "idTurno": 4,
+      "idProducto": 2,
+      "cantidad": 2
+    },
+    {
+      "id": "3",
+      "idTurno": 4,
+      "idProducto": 3,
+      "cantidad": 3
+    }
+  ]
+}
