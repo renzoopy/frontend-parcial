@@ -1,0 +1,22 @@
+<div class="popup-overlay">
+  <div class="popup-content">
+    <h3>Detalles del Turno</h3>
+    <div *ngIf="turno">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let detalle of productosDetalles">
+            <td>{{ detalle.nombre }}</td>
+            <td>{{ detalle.cantidad }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button (click)="onClose()">Cerrar</button>
+  </div>
+</div>

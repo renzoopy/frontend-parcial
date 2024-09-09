@@ -1,0 +1,61 @@
+<div class="container">
+  <h2>Turnos Agendados</h2>
+  <div class="filter">
+      <label for="fecha" style="margin-right: 10px;">Fecha:</label>
+      <input type="date" style="margin-right: 10px;" id="fecha" [(ngModel)]="selectedDate" (change)="filtrarTurnos()">
+      <button (click)="filtrarTurnos()">Filtrar</button>
+  </div>
+  
+  <table class="table-bordered">
+      <thead>
+          <tr>
+              <th>Inicio Agendamiento</th>
+              <th>Fin Agendamiento</th>
+              <th>Proveedor</th>
+              <th>Estado</th>
+              <th>Jaula</th>
+              <th>Inicio Recepción</th>
+              <th>Fin Recepción</th>
+              <th>Acciones</th>
+              <th>Detalles</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let turno of turnos">
+              <td>{{ turno.horaInicioAgendamiento }}</td>
+              <td>{{ turno.horaFinAgendamiento }}</td>
+              <td>{{ getProveedorNombre(turno.idProveedor) }}</td>
+              <td>{{ getEstado(turno) }}</td>
+              <td>{{ getJaulaNombre(turno.idJaula) }}</td>
+              <td>{{ turno.horaInicioRecepcion || '' }}</td>
+              <td>{{ turno.horaFinRecepcion || '' }}</td>
+              <td>
+                  <button *ngIf="!turno.horaInicioRecepcion" (click)="abrirPopupIniciarRecepcion(turno)">Iniciar Recepción</button>
+                  <button *ngIf="turno.horaInicioRecepcion && !turno.horaFinRecepcion" (click)="abrirPopupFinalizarRecepcion(turno)">Finalizar Recepción</button>
+              </td>
+              <td>
+                  <button (click)="abrirPopupDetalles(turno)">Detalles</button>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+
+  <!-- Popups -->
+    <div *ngIf="popupIniciarRecepcion" class="popup-overlay">
+        <app-popup *ngIf="popupIniciarRecepcion" (close)="onCloseIniciarRecepcion()">
+            <app-recepcion-formulario [turno]="selectedTurno" (save)="filtrarTurnos()" (close)="onCloseIniciarRecepcion()"></app-recepcion-formulario>
+        </app-popup>
+    </div>
+    
+    <div *ngIf="popupFinalizarRecepcion" class="popup-overlay">
+        <app-popup *ngIf="popupFinalizarRecepcion" (close)="onCloseFinalizarRecepcion()">
+            <app-recepcion-finalizar [turno]="selectedTurno" (save)="filtrarTurnos()" (close)="onCloseFinalizarRecepcion()"></app-recepcion-finalizar>
+        </app-popup>
+    </div>
+    
+    <div *ngIf="popupDetalles" class="popup-overlay">
+        <app-popup *ngIf="popupDetalles" (close)="onCloseDetalles()">
+            <app-turno-detalles [turno]="selectedTurno" (close)="onCloseDetalles()"></app-turno-detalles>
+        </app-popup>
+    </div>
+</div>

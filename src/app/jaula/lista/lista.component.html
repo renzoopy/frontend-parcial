@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>Lista de Jaulas</h2>
+    <button (click)="agregarJaula()" class="btn btn-primary">Agregar Jaula</button>
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Buscar jaulas..." class="form-control mb-3">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let jaula of filteredJaulas">
+          <td>{{ jaula.idJaula }}</td>
+          <td>{{ jaula.nombre }}</td>
+          <td>
+            <button (click)="verDetalles(jaula)" class="btn btn-info">Ver Detalles</button>
+            <button (click)="editarJaula(jaula)" class="btn btn-warning">Editar</button>
+            <button (click)="eliminarJaula(jaula.id)" class="btn btn-danger">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

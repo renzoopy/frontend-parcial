@@ -1,0 +1,9 @@
+<div class="popup-overlay">
+  <div class="popup-content">
+    <h2>Finalizar Recepción</h2>
+    <form (ngSubmit)="finalizarRecepcion()" #finalizarForm="ngForm">
+      <button style="margin-right: 10px;" type="submit" class="btn btn-primary">Finalizar Recepción</button>
+      <button type="button" (click)="onClose()">Cancelar</button>
+    </form>
+  </div>
+</div>

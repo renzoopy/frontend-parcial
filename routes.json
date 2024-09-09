@@ -1,0 +1,4 @@
+{
+    "/turnos/:id/detalles": "/detalles?filter[idTurno]=:id"
+  }
+  

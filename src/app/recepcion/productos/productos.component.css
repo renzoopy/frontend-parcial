@@ -1,0 +1,48 @@
+.container{
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.table-bordered {
+    margin: 25px auto;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #e4e4e4;
+    padding: 8px;
+    text-align: left;
+    text-align: center;
+}
+
+.table-bordered thead {
+    background-color: #e4e4e4;
+}
+
+.table-bordered th {
+    font-weight: bold;
+}
+
+.popup-overlay {
+    position: fixed; /* Mantiene el popup en su lugar sobre la página principal */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    z-index: 1000; /* Asegura que el popup esté encima de otros elementos */
+}
+
+.popup-content {
+    background: #fff; /* Fondo blanco para el contenido del popup */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para darle profundidad */
+    max-width: 600px;
+    width: 100%;
+}

@@ -1,0 +1,22 @@
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro y semi-transparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Asegúrate de que el popup esté sobre otros elementos */
+}
+
+.popup-content {
+    background: #fff; /* Fondo blanco para el contenido del popup */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para darle profundidad */
+    max-width: 600px;
+    width: 90%; /* Ajuste dinámico del ancho del popup */
+    margin: 0 auto; /* Centrar el popup horizontalmente */
+}

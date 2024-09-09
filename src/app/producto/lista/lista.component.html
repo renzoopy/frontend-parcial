@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>Lista de Productos</h2>
+    <button (click)="agregarProducto()" class="btn btn-primary">Agregar Producto</button>
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Buscar productos..." class="form-control mb-3">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let producto of filteredProductos">
+          <td>{{ producto.idProducto }}</td>
+          <td>{{ producto.nombre }}</td>
+          <td>
+            <button (click)="verDetalles(producto)" class="btn btn-info">Ver Detalles</button>
+            <button (click)="editarProducto(producto)" class="btn btn-warning">Editar</button>
+            <button (click)="eliminarProducto(producto.id)" class="btn btn-danger">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

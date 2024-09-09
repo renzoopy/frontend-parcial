@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>Lista de Proveedores</h2>
+    <button (click)="agregarProveedor()" class="btn btn-primary">Agregar Proveedor</button>
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Buscar proveedores..." class="form-control mb-3">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let proveedor of filteredProveedores">
+          <td>{{ proveedor.id }}</td>
+          <td>{{ proveedor.nombre }}</td>
+          <td>
+            <button (click)="verDetalles(proveedor.idProveedor)" class="btn btn-info">Ver Detalles</button>
+            <button (click)="editarProveedor(proveedor)" class="btn btn-warning">Editar</button>
+            <button (click)="eliminarProveedor(proveedor.id)" class="btn btn-danger">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

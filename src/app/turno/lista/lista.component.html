@@ -1,0 +1,43 @@
+<div class="container">
+  <h2>Lista de Turnos</h2>
+  <button (click)="agregarTurno()" class="btn btn-primary">Agregar Turno</button>
+  
+  <div class="filter">
+    <label for="fecha">Fecha:</label>
+    <input type="date" id="fecha" [(ngModel)]="selectedDate" (change)="onDateChange($event)">
+    <button (click)="filtrarTurnos()">Filtrar</button>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Fecha</th>
+        <th>Proveedor</th>
+        <th>Jaula</th>
+        <th>Hora Inicio Agendamiento</th>
+        <th>Hora Fin Agendamiento</th>
+        <th>Hora Inicio Recepción</th>
+        <th>Hora Fin Recepción</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let turno of filteredTurnos">
+        <td>{{ turno.idTurno }}</td>
+        <td>{{ turno.fecha }}</td>
+        <td>{{ turno.idProveedor }}</td>
+        <td>{{ turno.idJaula }}</td>
+        <td>{{ turno.horaInicioAgendamiento }}</td>
+        <td>{{ turno.horaFinAgendamiento }}</td>
+        <td>{{ turno.horaInicioRecepcion || 'No Iniciado' }}</td>
+        <td>{{ turno.horaFinRecepcion || 'No Finalizado' }}</td>
+        <td>
+          <button (click)="verDetalles(turno)" class="btn btn-info">Ver Detalles</button>
+          <button (click)="editarTurno(turno)" class="btn btn-warning">Editar</button>
+          <button (click)="eliminarTurno(turno.id)" class="btn btn-danger">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

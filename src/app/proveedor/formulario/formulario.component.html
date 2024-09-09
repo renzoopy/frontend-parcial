@@ -1,0 +1,11 @@
+<div class="container">
+  <h2>{{ isEdit ? 'Editar Proveedor' : 'Agregar Proveedor' }}</h2>
+  <form (ngSubmit)="onSubmit()" #proveedorForm="ngForm">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" [(ngModel)]="proveedor.nombre" name="nombre" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">{{ isEdit ? 'Actualizar' : 'Agregar' }}</button>
+    <button (click)="cancelar()" type="button" class="btn btn-secondary">Cancelar</button>
+  </form>
+</div>

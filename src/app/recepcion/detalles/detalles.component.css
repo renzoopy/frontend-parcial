@@ -1,0 +1,49 @@
+.container {
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.table {
+    margin-left: 56.953px;
+    margin-bottom: 15px;
+    border-collapse: collapse;
+    width: auto; /* Cambia de 90% a auto para ajuste dinámico */
+    max-width: 100%; /* Asegura que la tabla no exceda el contenedor */
+}
+
+.table th,
+.table td {
+    border: 1px solid #e4e4e4;
+    padding: 8px;
+    text-align: center;
+}
+
+.table thead {
+    background-color: #e4e4e4;
+}
+
+.table th {
+    font-weight: bold;
+}
+
+.popup-content {
+    background: #fff; /* Fondo blanco para el contenido del popup */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para darle profundidad */
+    max-width: 600px;
+    width: 100%;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro y semi-transparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Asegúrate de que el popup esté sobre otros elementos */
+}

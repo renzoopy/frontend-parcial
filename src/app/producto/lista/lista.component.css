@@ -1,0 +1,25 @@
+.container{
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.table-striped {
+    margin: 25px auto;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+.table-striped th,
+.table-striped td {
+    border: 1px solid #e4e4e4;
+    padding: 8px;
+    text-align: left;
+}
+
+.table-striped thead {
+    background-color: #e4e4e4;
+}
+
+.table-striped th {
+    font-weight: bold;
+}

@@ -1,0 +1,17 @@
+<div class="popup-overlay">
+  <div class="popup-content">
+    <h2>Iniciar Recepción</h2>
+    <form (ngSubmit)="iniciarRecepcion()" #recepcionForm="ngForm">
+      <div class="form-group">
+        <label style="margin-right: 10px;" for="jaula">Seleccione Jaula</label>
+        <select [(ngModel)]="selectedJaula" name="jaula" required>
+          <option *ngFor="let jaula of jaulasDisponibles" [ngValue]="jaula">
+            {{ jaula.nombre }}
+          </option>
+        </select>
+      </div>
+      <button style="margin-right: 10px;" type="submit" class="btn btn-primary">Iniciar Recepción</button>
+      <button type="button" (click)="onClose()">Cancelar</button>
+    </form>
+  </div>
+</div>
