@@ -7,6 +7,7 @@
         <tr>
           <th>ID</th>
           <th>Nombre</th>
+          <th>Estado</th>
           <th>Acciones</th>
         </tr>
       </thead>
@@ -14,8 +15,9 @@
         <tr *ngFor="let jaula of filteredJaulas">
           <td>{{ jaula.idJaula }}</td>
           <td>{{ jaula.nombre }}</td>
+          <td>{{ jaula.enUso }}</td>
           <td>
-            <button (click)="verDetalles(jaula)" class="btn btn-info">Ver Detalles</button>
+            <!-- <button (click)="verDetalles(jaula)" class="btn btn-info">Ver Detalles</button> -->
             <button (click)="editarJaula(jaula)" class="btn btn-warning">Editar</button>
             <button (click)="eliminarJaula(jaula.id)" class="btn btn-danger">Eliminar</button>
           </td>
